@@ -1,0 +1,12 @@
+@import url("./reset.css");
+@import url("./animations.css");
+@import url("./variables.css");
+
+html {
+    max-width: 100dvw;
+    min-height: 100dvh;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
