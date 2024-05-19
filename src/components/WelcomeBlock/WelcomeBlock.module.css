@@ -9,25 +9,17 @@
 } 
 
 .block {
-    min-width: 350px;
-    min-height: 350px;
-    background-color: red;
+    width: 350px;
+    height: max-content;
+    transition: 350ms;
+    &:hover{
+        transition: 300ms;
+        cursor: pointer;
+        transform: scale(1.1);
+    }
 } 
 
 .block_active {
-    min-width: 350px;
-    min-height: 350px;
-    background-color: red;
+    width: 350px;
     animation: WelcomeBlock_animation 5s;
-}
-
-.btn {
-    width: 150px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border: 1px solid black;
-    position: absolute;
 }
