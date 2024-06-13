@@ -4,7 +4,7 @@ import WelcomeBlock from "../../components/WelcomeBlock/WelcomeBlock";
 import MapBlock from "../../components/MapBlock/MapBlock";
 
 const MainPage = () => {
-    const [continueFlag, setContinueFlag] = useState(false);
+    const [continueFlag, setContinueFlag] = useState(false); // false
 
     
     return (

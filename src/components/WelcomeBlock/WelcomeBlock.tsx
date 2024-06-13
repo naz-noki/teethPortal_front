@@ -14,20 +14,15 @@ const WelcomeBlock: FC<types.I_WelcomeBlockProps> = ({
         }, 1500);
     };
 
-    useEffect(() => {
-        document.addEventListener("click", () => continueFunc());
-
-        return () => {
-            document.removeEventListener("click", () => continueFunc());
-        };
-    }, []);
      
     return (
         <section className={style.main}>
             <img 
-                src="./images/welocome__image.jpg"
+                onClick={() => continueFunc()}
+                src="./images/welocome__image.png"
                 className={`
-                    ${animationFlag ? style.block_active : style.block}
+                    ${style.block} 
+                    ${animationFlag && style.block_active}
                 `}
             />
         </section>

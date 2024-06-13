@@ -1,12 +1,25 @@
 @import url("./reset.css");
 @import url("./animations.css");
 @import url("./variables.css");
+/* @import url("../fonts/Unbounded/Unbounded-Black.ttf"); */
+/* @import url("../fonts/Unbounded/Unbounded-Bold.ttf");
+@import url("../fonts/Unbounded/Unbounded-ExtraBold.ttf");
+@import url("../fonts/Unbounded/Unbounded-ExtraLight.ttf");
+@import url("../fonts/Unbounded/Unbounded-Light.ttf");
+@import url("../fonts/Unbounded/Unbounded-Medium.ttf");
+@import url("../fonts/Unbounded/Unbounded-Regular.ttf");
+@import url("../fonts/Unbounded/Unbounded-SemiBold.ttf");
+@import url("../fonts/Unbounded/Unbounded-VariableFont_wght.ttf"); */
+
+@font-face {
+    font-family: 'Unbounded-Regular';
+    src: url('../fonts/Unbounded/Unbounded-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
 
 html {
     max-width: 100dvw;
     min-height: 100dvh;
     background-color: black;
     color: white;
-    overflow: hidden;
     scroll-behavior: smooth;
 }

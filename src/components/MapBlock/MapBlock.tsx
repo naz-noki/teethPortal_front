@@ -1,49 +1,66 @@
 import * as types from "./MapBlock.types";
 import style from "./MapBlock.module.css";
-
-const mapList: types.I_MapElement[] = [
-    {
-        link: "/empire",
-        imagePath: "./images/tower.png",
-        title: "empire",
-    },
-    {
-        link: "/tape",
-        imagePath: "./images/tower1.png",
-        title: "tape",
-    },
-    {
-        link: "/gallery",
-        imagePath: "./images/tower2.png",
-        title: "gallery",
-    },
-    {
-        link: "/library",
-        imagePath: "./images/tower3.png",
-        title: "library",
-    },
-    {
-        link: "/player",
-        imagePath: "./images/tower4.png",
-        title: "player",
-    },
-];
+import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import ImagesStorage from "../../storage/imagesStorage/imagesStorage";
+import languageStorage from "../../storage/languageStorage/languageStorage";
 
 const MapBlock = () => {
+    const monitor = useRef<null | HTMLElement>(null);
+    const [mapElementWidth, setMapElementWidth] = useState<number>(65);
+
+    const moveMonitor = (monitor: HTMLElement | null, event: MouseEvent) => {
+        if(monitor === null) return;
+
+        let x = event.clientX / window.innerWidth;
+        let y = event.clientY / window.innerHeight;  
+        monitor.style.transform = 'translate(-' + x * 50 + 'px, -' + y * 50 + 'px)';
+    }; 
+
+    const scrollMapElement = (value: number) => {
+        if(value > 0) {
+            setMapElementWidth((prev) => {
+                if(prev >= 165) return prev;
+                return prev+5; 
+            });
+        } else {
+            setMapElementWidth((prev) => {
+                if(prev <= 35) return prev;
+                return prev-5; 
+            });
+        };
+    };
+ 
+    useEffect(() => {
+        window.addEventListener('mousemove', (e) => moveMonitor(monitor.current, e));
+        window.addEventListener("wheel", (e) => scrollMapElement(e.deltaY));
+
+        return () => {
+            window.removeEventListener('mousemove', (e) => moveMonitor(monitor.current, e));
+            window.removeEventListener("wheel", (e) => scrollMapElement(e.deltaY));
+        };
+    }, []);
 
     return (
-        <section className={style.mainBlock}>
-        {
-            mapList.map((el) => 
-                <div className={style.mapElement}>
+        <section className={style.mainBlock} ref={monitor}>
+            <div className={style.mapElement}>
+                <Link 
+                    to={"./contact"}
+                    className={style.mapElement_link}
+                >  
                     <img 
-                        src={el.imagePath} 
+                        className={style.mapElement_icon}
+                        src={ImagesStorage.mapElementImage} 
                         alt="Map element image" 
+                        style={{
+                            width: mapElementWidth
+                        }}
                     />
-                    <h1>{el.title.toUpperCase()}</h1>
-                </div>
-            )
-        }
+                    <h1 className={style.mapElement_title}>
+                        {languageStorage.GetPhrase("mapElementTitle")}
+                    </h1>
+                </Link>  
+            </div>
         </section>
     );
 };

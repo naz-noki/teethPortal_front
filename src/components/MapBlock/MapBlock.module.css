@@ -1,4 +1,36 @@
+@import url("../../assets/styles/style.css");
+
 .mainBlock {
-    width: 100%;
-    height: 100%;
+    max-width: 100dvw;
+    height: 100dvh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mapElement {
+    width: max-content;
+    height: max-content;
+} 
+
+.mapElement_link{
+    text-decoration: none;
+}
+
+.mapElement_icon {
+    width: 65px;
+    height: max-content; 
+    display: block;
+    margin: 0 auto;
+} 
+
+.mapElement_title {
+    width: max-content;
+    height: max-content;
+    margin: 5px auto;
+    color: white;
+    font-weight: regular;
+    font-size: 15px;
+    font-family: "Unbounded-Regular";
 }
