@@ -25,6 +25,14 @@ class LanguageStorage {
         return currentLang;
     };
 
+    GetAllLang(): types.T_LanguageKey[] {
+        const allLang: types.T_LanguageKey[] = [];
+
+        for(const key in language) if(types.IsLanguageKey(key)) allLang.push(key);
+        
+        return allLang;
+    };
+
     SetLang(value: types.T_LanguageKey) {
         localStorage.setItem("lang", value);
     };

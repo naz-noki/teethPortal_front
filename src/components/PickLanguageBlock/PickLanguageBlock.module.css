@@ -1,0 +1,45 @@
+.block{
+    width: max-content;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+
+.item{
+    width: max-content;
+    height: max-content;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.445);
+    font-weight: regular;
+    font-size: 15px;
+    font-family: "Unbounded-Regular";
+    transition: 350ms;
+    background-color: transparent;
+    border: none;
+    &:hover{
+        transition: 300ms;
+        color: white;
+    }
+}
+
+.item__active{
+    width: max-content;
+    height: max-content;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.616);
+    font-weight: regular;
+    font-size: 15.5px;
+    font-family: "Unbounded-Regular";
+    transition: 350ms;
+    background-color: transparent;
+    border: none;
+    &:hover{
+        transition: 300ms;
+        color: white;
+    }
+}
+
