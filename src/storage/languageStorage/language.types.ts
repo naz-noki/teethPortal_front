@@ -2,6 +2,7 @@ export type T_LanguageKey =  "ru" | "en";
 
 export interface I_Language {
     mapElementTitle: string;
+    textForPageNumber: string; 
 };
 
 export interface I_Languages {

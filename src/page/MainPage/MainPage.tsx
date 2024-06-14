@@ -2,6 +2,7 @@ import { useState } from "react";
 import style from "./MainPage.module.css";
 import WelcomeBlock from "../../components/WelcomeBlock/WelcomeBlock";
 import MapBlock from "../../components/MapBlock/MapBlock";
+import MapBlockHeader from "../../components/MapBlockHeader/MapBlockHeader";
 import PickLanguageBlock from "../../components/PickLanguageBlock/PickLanguageBlock";
 import languageStorage from "../../storage/languageStorage/languageStorage";
 
@@ -16,11 +17,15 @@ const MainPage = () => {
             ? <WelcomeBlock 
                 setContinueFlag={(value) => setContinueFlag(value)}
             />
-            : <MapBlock />
+            : <>
+                <MapBlockHeader />
+                <MapBlock />
+            </>
         }
         {
             continueFlag &&
             <PickLanguageBlock 
+                pageNumber={1}
                 lang={lang}
                 setLang={(value) => setLang(value)}
             />

@@ -1,0 +1,39 @@
+.header {
+    width: 100%;
+    height: max-content;
+    padding-top: 15px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 2;
+}
+
+.header__title_block {
+    width: max-content;
+    height: max-content;
+    transition: 350ms; 
+    &:hover{
+        transition: 300ms;
+        transform: scale(1.05);
+        text-shadow: rgb(255, 255, 255) 1px 0 15px;
+    }
+}
+
+.header__title_h2 {
+    width: max-content;
+    height: max-content;
+    margin: 0 auto;
+    font-size: 24px;
+    font-family: "Caesar-Dressing";
+}
+
+.header__title_h1 {
+    width: max-content;
+    height: max-content;
+    margin: 0 auto;
+    margin-top: -10px;
+    font-size: 36px;
+    font-family: "Rock-Salt";
+}
