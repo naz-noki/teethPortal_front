@@ -1,4 +1,4 @@
-import * as types from "./MapBlock.types";
+// import * as types from "./MapBlock.types";
 import style from "./MapBlock.module.css";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
