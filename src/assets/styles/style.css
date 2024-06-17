@@ -8,6 +8,11 @@
 }
 
 @font-face {
+    font-family: 'Unbounded-Bold';
+    src: url('../fonts/Unbounded/Unbounded-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
     font-family: 'Caesar-Dressing';
     src: url('../fonts/CaesarDressing/caesar-dressing-cyrillic.otf')  format('truetype'); /* Safari, Android, iOS */
 }

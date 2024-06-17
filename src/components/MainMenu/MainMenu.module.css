@@ -1,0 +1,72 @@
+@import url("../../assets/styles/style.css");
+
+.menu {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #0000009e;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu__cursor {
+    position: absolute;
+    z-index: -1;
+    width: 28px;
+    height: 28px;
+    content: "";
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    border-radius: 50%;
+    background-color: #5585ff; 
+    -webkit-box-shadow: 0px 0px 100px 30px rgba(85, 133, 255, 0.2);
+    -moz-box-shadow: 0px 0px 100px 30px rgba(85, 133, 255, 0.2);
+    box-shadow: 0px 0px 100px 30px rgba(85, 133, 255, 0.2);
+    filter: blur(10px);
+}
+
+.menu__list {
+    display: block;
+    width: max-content;
+    height: max-content;
+} 
+
+.menu__item {
+    display: block;
+    width: max-content;
+    height: max-content;
+    margin: 45px auto;
+    color: white;
+    font-family: "Unbounded-Bold";
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: 5px;
+    transition: 350ms;
+    &:hover {
+        transition: 300ms;
+        color: #5585ffb2;
+    }
+}
+
+.menu__item_active {
+    display: block;
+    width: max-content;
+    height: max-content;
+    margin: 45px auto;
+    color: #5585FF;
+    font-family: "Unbounded-Bold";
+    font-weight: 750;
+    font-size: 48px;
+    letter-spacing: 6%;
+    transition: 350ms;
+    &:hover {
+        transition: 300ms;
+        color: #5585ffb2;
+    }
+}

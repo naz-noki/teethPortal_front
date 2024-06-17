@@ -5,6 +5,7 @@ import MapBlock from "../../components/MapBlock/MapBlock";
 import MapBlockHeader from "../../components/MapBlockHeader/MapBlockHeader";
 import PickLanguageBlock from "../../components/PickLanguageBlock/PickLanguageBlock";
 import languageStorage from "../../storage/languageStorage/languageStorage";
+import MainMenu from "../../components/MainMenu/MainMenu";
 
 const MainPage = () => {
     const [continueFlag, setContinueFlag] = useState(false); 
@@ -18,7 +19,8 @@ const MainPage = () => {
                 setContinueFlag={(value) => setContinueFlag(value)}
             />
             : <>
-                <MapBlockHeader />
+                <MainMenu />
+                <MapBlockHeader />    
                 <MapBlock />
             </>
         }
