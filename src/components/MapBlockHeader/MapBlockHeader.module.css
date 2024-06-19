@@ -27,7 +27,7 @@
     font-size: 15px;
     font-family: "Unbounded-Regular";
     position: relative;
-    display: inline-block; 
+    display: inline-block;
     &::after {
         position: absolute;
         opacity: 0;

@@ -1,24 +1,26 @@
 import style from "./MainMenu.module.css";
+import * as types from "./MainMenu.types";
 import languageStorage from "../../storage/languageStorage/languageStorage";
 import { Link } from "react-router-dom";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, FC, useState } from "react";
 
-const MenuItems = [
-    {
-        title: languageStorage.GetPhrase("menuFirstTitle"),
-        path: "/library",
-    },
-    {
-        title: languageStorage.GetPhrase("menuSecondTitle"),
-        path: "/board",
-    },
-    {
-        title: languageStorage.GetPhrase("menuThirdTitle"),
-        path: "/contacts",
-    },
-];
-
-const MainMenu = () => {
+const MainMenu: FC<types.I_MainMenuProps> = ({
+    toggleMenu,
+}) => {
+    const [menuItems, setMenuItems] = useState([
+        {
+            title: languageStorage.GetPhrase("menuFirstTitle"),
+            path: "/library",
+        },
+        {
+            title: languageStorage.GetPhrase("menuSecondTitle"),
+            path: "/board",
+        },
+        {
+            title: languageStorage.GetPhrase("menuThirdTitle"),
+            path: "/contacts",
+        },        
+    ]);
     const followCursorElement = useRef<null | HTMLDivElement>(null);
     
     
@@ -46,9 +48,17 @@ const MainMenu = () => {
                 ref={followCursorElement} 
                 className={style.menu__cursor}
             ></div>
+            <button
+                onClick={() => toggleMenu()} 
+                className={style.menu__btn__block}
+            >
+                <p className={style.menu__btn__text}>
+                    {languageStorage.GetPhrase("menuButtonTitle")}
+                </p>
+            </button>
             <ul className={style.menu__list}>
             {
-                MenuItems.map((el, idx) => 
+                menuItems.map((el, idx) => 
                     <Link
                         to={el.path}
                         key={idx}

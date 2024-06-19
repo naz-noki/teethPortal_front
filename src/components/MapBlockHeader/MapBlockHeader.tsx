@@ -1,7 +1,11 @@
+import { FC } from "react";
 import style from "./MapBlockHeader.module.css";
+import * as types from "./MapBlockHeader.types";
 import languageStorage from "../../storage/languageStorage/languageStorage";
 
-const MapBlockHeader = () => {
+const MapBlockHeader: FC<types.I_MapBlockHeaderProps> = ({
+    toggleMenu,
+}) => {
 
     return (
         <header className={style.header}>
@@ -18,7 +22,10 @@ const MapBlockHeader = () => {
                     Welcome
                 </h1>
             </div>
-            <button className={style.header__btn__block}>
+            <button
+                onClick={() => toggleMenu()} 
+                className={style.header__btn__block}
+            >
                 <p className={style.header__btn__text}>
                     {languageStorage.GetPhrase("menuButtonTitle")}
                 </p>

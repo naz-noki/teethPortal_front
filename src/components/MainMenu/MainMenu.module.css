@@ -70,3 +70,48 @@
         color: #5585ffb2;
     }
 }
+
+.menu__btn__block {
+    width: max-content;
+    height: max-content;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    margin: 15px 30px;
+}
+
+.menu__btn__text {
+    width: max-content;
+    height: max-content;
+    color: white;
+    font-weight: regular;
+    font-size: 15px;
+    font-family: "Unbounded-Regular";
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    &::after {
+        position: absolute;
+        opacity: 0;
+        transition: 350ms;
+        width: 28px;
+        height: 28px;
+        content: "";
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        border-radius: 50%;
+        background-color: #ffffff; 
+        -webkit-box-shadow: 0px 0px 75px 25px rgba(255, 255, 255, 0.15);
+        -moz-box-shadow: 0px 0px 75px 25px rgba(255, 255, 255, 0.15);
+        box-shadow: 0px 0px 75px 25px rgba(255, 255, 255, 0.15);
+        filter: blur(10px);
+    }
+}
+
+.menu__btn__text:hover {
+    &::after {
+        transition: 300ms;
+        opacity: 1;
+    }
+}

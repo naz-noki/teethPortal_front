@@ -10,17 +10,29 @@ import MainMenu from "../../components/MainMenu/MainMenu";
 const MainPage = () => {
     const [continueFlag, setContinueFlag] = useState(false); 
     const [lang, setLang] = useState(languageStorage.GetLang());
+    const [showMenu, setShowMenu] = useState(false);
+
+    const toggleMenu = () => {
+        setShowMenu((prev) => !prev);
+    };
     
     return (
         <main className={style.mainBlock}>
+        {
+            showMenu && 
+            <MainMenu 
+                toggleMenu={() => toggleMenu()}
+            />
+        }
         {
             !continueFlag 
             ? <WelcomeBlock 
                 setContinueFlag={(value) => setContinueFlag(value)}
             />
             : <>
-                <MainMenu />
-                <MapBlockHeader />    
+                <MapBlockHeader 
+                    toggleMenu={() => toggleMenu()}
+                />     
                 <MapBlock />
             </>
         }
