@@ -1,0 +1,37 @@
+@import url("../../assets/styles/style.css");
+
+.wrapper {
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.block {
+    width: max-content;
+    height: max-content;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+    border: 1px solid white;
+} 
+
+.item__block {
+    width: max-content;
+    height: max-content;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+} 
+
+.item__text {
+    width: max-content;
+    height: max-content;
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+}

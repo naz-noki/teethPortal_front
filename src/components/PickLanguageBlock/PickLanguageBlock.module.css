@@ -6,19 +6,6 @@
     left: 15px;
 }
 
-.block__number {
-    width: max-content;
-    height: max-content;
-    cursor: pointer;
-    color: rgba(255, 255, 255, 0.445);
-    font-weight: regular;
-    font-size: 15px;
-    font-family: "Unbounded-Regular";
-    background-color: transparent;
-    margin-left: 5px;
-    margin-bottom: 8px;
-}
-
 .block__lang{
     width: max-content;
     height: max-content;

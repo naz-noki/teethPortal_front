@@ -5,3 +5,26 @@
     height: 100%;
     overflow: hidden;
 }
+
+.header__btn__text {
+    width: max-content;
+    height: max-content;
+    color: white;
+    font-weight: regular;
+    font-size: 15px;
+    font-family: "Unbounded-Regular";
+}
+
+.block__number {
+    width: max-content;
+    height: max-content;
+    position: absolute;
+    bottom: 45px;
+    left: 20px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.445);
+    font-weight: regular;
+    font-size: 15px;
+    font-family: "Unbounded-Regular";
+    background-color: transparent;
+}

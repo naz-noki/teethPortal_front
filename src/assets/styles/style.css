@@ -28,4 +28,5 @@ html {
     background-color: black;
     color: white;
     scroll-behavior: smooth;
+    /* overflow: hidden; */
 }

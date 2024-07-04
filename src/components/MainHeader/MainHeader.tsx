@@ -1,17 +1,23 @@
 import { FC } from "react";
-import style from "./MapBlockHeader.module.css";
-import * as types from "./MapBlockHeader.types";
+import style from "./MainHeader.module.css";
+import * as types from "./MainHeader.types";
 import languageStorage from "../../storage/languageStorage/languageStorage";
 
-const MapBlockHeader: FC<types.I_MapBlockHeaderProps> = ({
+const MainHeader: FC<types.I_MainHeaderProps> = ({
     toggleMenu,
+    title,
+    buttonText,
+    buttonFunc,
 }) => {
 
     return (
         <header className={style.header}>
-            <button className={style.header__btn__block}>
+            <button
+                onClick={() => buttonFunc()} 
+                className={style.header__btn__block}
+            >
                 <p className={style.header__btn__text}>
-                    {languageStorage.GetPhrase("mapHeaderText")}
+                    {buttonText}
                 </p>
             </button>
             <div className={style.header__title_block}>
@@ -19,7 +25,7 @@ const MapBlockHeader: FC<types.I_MapBlockHeaderProps> = ({
                     ZONE
                 </h2>
                 <h1 className={style.header__title_h1}>
-                    Welcome
+                    {title}
                 </h1>
             </div>
             <button
@@ -34,4 +40,4 @@ const MapBlockHeader: FC<types.I_MapBlockHeaderProps> = ({
     );
 };
 
-export default MapBlockHeader;
+export default MainHeader;

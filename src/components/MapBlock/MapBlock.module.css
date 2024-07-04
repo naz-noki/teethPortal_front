@@ -2,11 +2,14 @@
 
 .mainBlock {
     max-width: 100dvw;
-    height: 100dvh;
-    overflow: hidden;
+    /* height: 100%; */
+    position: absolute;
+    margin: 0 auto;
+    z-index: -3;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: green;
 }
 
 .mapElement {

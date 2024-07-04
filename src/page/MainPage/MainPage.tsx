@@ -1,15 +1,13 @@
 import { useState } from "react";
 import style from "./MainPage.module.css";
-import WelcomeBlock from "../../components/WelcomeBlock/WelcomeBlock";
 import MapBlock from "../../components/MapBlock/MapBlock";
-import MapBlockHeader from "../../components/MapBlockHeader/MapBlockHeader";
+import MainHeader from "../../components/MainHeader/MainHeader";
 import PickLanguageBlock from "../../components/PickLanguageBlock/PickLanguageBlock";
-import languageStorage from "../../storage/languageStorage/languageStorage";
+import LanguageStorage from "../../storage/languageStorage/languageStorage";
 import MainMenu from "../../components/MainMenu/MainMenu";
 
 const MainPage = () => {
-    const [continueFlag, setContinueFlag] = useState(false); 
-    const [lang, setLang] = useState(languageStorage.GetLang());
+    const [lang, setLang] = useState(LanguageStorage.GetLang());
     const [showMenu, setShowMenu] = useState(false);
 
     const toggleMenu = () => {
@@ -24,26 +22,21 @@ const MainPage = () => {
                 toggleMenu={() => toggleMenu()}
             />
         }
-        {
-            !continueFlag 
-            ? <WelcomeBlock 
-                setContinueFlag={(value) => setContinueFlag(value)}
-            />
-            : <>
-                <MapBlockHeader 
-                    toggleMenu={() => toggleMenu()}
-                />     
-                <MapBlock />
-            </>
-        }
-        {
-            continueFlag &&
+            <MainHeader 
+                toggleMenu={() => toggleMenu()}
+                title="Welcome"
+                buttonText={LanguageStorage.GetPhrase("libraryHeaderText")}
+                buttonFunc={() => console.log("qwe")}
+            />    
+            <MapBlock />
+            <div className={style.block__number}>
+                {LanguageStorage.GetPhrase("textForPageNumber")}
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1
+            </div>
             <PickLanguageBlock 
-                pageNumber={1}
                 lang={lang}
                 setLang={(value) => setLang(value)}
             />
-        }
         </main>
     );
 };

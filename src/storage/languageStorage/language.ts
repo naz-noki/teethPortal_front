@@ -9,6 +9,7 @@ const language: types.I_Languages = {
         menuFirstTitle: "БИБЛИОТЕКА",
         menuSecondTitle: "ДОСКА",
         menuThirdTitle: "КОНТАКТЫ",
+        libraryHeaderText: "карта",
     },
     "en": {
         mapElementTitle: "00 lighthouse",
@@ -18,6 +19,7 @@ const language: types.I_Languages = {
         menuFirstTitle: "LIBRARY",
         menuSecondTitle: "BOARD",
         menuThirdTitle: "CONTACTS",    
+        libraryHeaderText: "map",
     },
 };
 

@@ -8,6 +8,7 @@ export interface I_Language {
     menuFirstTitle: string;
     menuSecondTitle: string;
     menuThirdTitle: string;
+    libraryHeaderText: string;
 };
 
 export interface I_Languages {
