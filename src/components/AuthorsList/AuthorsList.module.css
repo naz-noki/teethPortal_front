@@ -1,11 +1,15 @@
 @import url("../../assets/styles/style.css");
 
 .wrapper {
-    width: 100%;
-    min-height: 100dvh;
+    width: 95%;
+    height: max-content;
+    margin: 0 auto;
+    margin-top: 25px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 35px;
 }
 
 .block {
@@ -34,4 +38,5 @@
     color: white;
     font-size: 21px;
     font-weight: bold;
+    font-family: "Unbounded-Regular";
 }

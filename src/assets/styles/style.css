@@ -28,5 +28,12 @@ html {
     background-color: black;
     color: white;
     scroll-behavior: smooth;
-    /* overflow: hidden; */
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+input::placeholder, textarea::placeholder {
+    color: black; 
 }

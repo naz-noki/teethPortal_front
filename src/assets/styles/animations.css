@@ -92,3 +92,24 @@
     40%, 60% { transform: translate3d(0, 50%, 0); }
     100% { transform: translate3d(0, 0, 0); }
 }
+
+/* Анимация для добавления к элементу */
+.animate__animated {
+  animation-duration: 1s;
+}
+
+/* Анимация для появления снизу */
+.animate__fadeInDown {
+  animation-name: animate__fadeInDown;
+}
+
+@keyframes animate__fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

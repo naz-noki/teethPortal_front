@@ -1,0 +1,31 @@
+@import url("../../assets/styles/style.css");
+
+.block {
+    width: 365px;
+    height: 45px;
+    background-color: #5585FF;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    margin: 35px auto;
+}
+
+.block__icon {
+    width: 21px;
+    height: 21px;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+.block__inp {
+    width: 85%;
+    height: 40px;
+    padding-right: 15px;
+    background-color: #5585FF;
+    border-radius: 0px 50px 50px 0px;
+    outline: none;
+    border: none;
+    font-family: 'Unbounded-Regular';
+    font-size: 16px;
+    color: black;
+}

@@ -35,7 +35,7 @@ const LibraryPage = () => {
             title="Library"
             buttonText={languageStorage.GetPhrase("libraryHeaderText")}
             buttonFunc={() => goToMapPage()}
-        />     
+        />   
         <AuthorsList />
         <PickLanguageBlock 
             lang={lang}

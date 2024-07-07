@@ -78,7 +78,9 @@
     cursor: pointer;
     background-color: transparent;
     border: none;
-    margin: 15px 30px;
+    position: fixed;
+    top: 2px;
+    right: 2px;
 }
 
 .menu__btn__text {

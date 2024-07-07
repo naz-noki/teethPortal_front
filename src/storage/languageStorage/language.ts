@@ -10,6 +10,7 @@ const language: types.I_Languages = {
         menuSecondTitle: "ДОСКА",
         menuThirdTitle: "КОНТАКТЫ",
         libraryHeaderText: "карта",
+        searchBarPlaceholder: "Поиск",
     },
     "en": {
         mapElementTitle: "00 lighthouse",
@@ -20,6 +21,7 @@ const language: types.I_Languages = {
         menuSecondTitle: "BOARD",
         menuThirdTitle: "CONTACTS",    
         libraryHeaderText: "map",
+        searchBarPlaceholder: "Search",
     },
 };
 

@@ -1,15 +1,12 @@
 @import url("../../assets/styles/style.css");
 
 .mainBlock {
-    max-width: 100dvw;
-    /* height: 100%; */
-    position: absolute;
+    width: 100dvw;
+    height: 90dvh;
     margin: 0 auto;
-    z-index: -3;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: green;
 }
 
 .mapElement {

@@ -9,6 +9,7 @@ export interface I_Language {
     menuSecondTitle: string;
     menuThirdTitle: string;
     libraryHeaderText: string;
+    searchBarPlaceholder: string;
 };
 
 export interface I_Languages {
