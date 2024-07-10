@@ -7275,11 +7275,14 @@ const AuthorsList = () => {
 
     return (
         <>
+        {
+            hints.length > 0 &&
             <SearchBar 
                 cb={(value) => setFilter(value)}
                 hints={hints}
                 swapHintDelay={500}
             />
+        }
             <section className={style.wrapper}>
             {
                 filteredAuthors.map((el, idx) => 
