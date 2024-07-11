@@ -17,7 +17,7 @@
 .item{
     width: max-content;
     height: max-content;
-    cursor: pointer;
+    cursor: url("./images/pCur.png"), auto;
     color: rgba(255, 255, 255, 0.445);
     font-weight: regular;
     font-size: 15px;
@@ -34,7 +34,7 @@
 .item__active{
     width: max-content;
     height: max-content;
-    cursor: pointer;
+    cursor: url("./images/pCur.png"), auto;
     color: rgba(255, 255, 255, 0.616);
     font-weight: regular;
     font-size: 15.5px;

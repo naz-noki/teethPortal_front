@@ -15,6 +15,7 @@
 } 
 
 .mapElement_link{
+    cursor: url("./images/pCur.png"), auto;
     text-decoration: none;
 }
 

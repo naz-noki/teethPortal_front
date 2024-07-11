@@ -27,7 +27,7 @@
 .item__block {
     width: max-content;
     height: max-content;
-    cursor: pointer;
+    cursor: url("./images/pCur.png"), auto;
     background-color: transparent;
     border: none;
 } 

@@ -11,7 +11,7 @@
 .header__btn__block {
     width: max-content;
     height: max-content;
-    cursor: pointer;
+    cursor: url("./images/pCur.png"), auto;
     background-color: transparent;
     border: none;
     margin: 15px 30px;

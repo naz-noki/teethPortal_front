@@ -40,6 +40,7 @@
     display: block;
     width: max-content;
     height: max-content;
+    cursor: url("./images/pCur.png"), auto;
     margin: 65px auto;
     color: white;
     font-family: "Unbounded-Bold";
@@ -75,7 +76,7 @@
 .menu__btn__block {
     width: max-content;
     height: max-content;
-    cursor: pointer;
+    cursor: url("./images/pCur.png"), auto;
     background-color: transparent;
     border: none;
     position: fixed;

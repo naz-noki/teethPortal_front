@@ -14,7 +14,7 @@
     transition: 350ms;
     &:hover{
         transition: 300ms;
-        cursor: pointer;
+        cursor: url("./images/pCur.png"), auto;
         transform: scale(1.1);
     }
 } 
