@@ -31,6 +31,7 @@ const LibraryPage = () => {
             />
         }
         <MainHeader 
+            isAuthor={false}
             toggleMenu={() => toggleMenu()}
             title="Library"
             buttonText={languageStorage.GetPhrase("libraryHeaderText")}

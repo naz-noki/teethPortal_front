@@ -30,13 +30,24 @@
     cursor: url("./images/pCur.png"), auto;
     background-color: transparent;
     border: none;
+    transition: 350ms;
+    &:hover {
+        transition: 300ms;
+        transform: scale(1.1);
+    }
 } 
+
+.item__avatar {
+    width: 91px;
+    height: 214px;
+}
 
 .item__text {
     width: max-content;
     height: max-content;
+    margin: 0 auto;
     color: white;
-    font-size: 21px;
+    font-size: 15px;
     font-weight: bold;
     font-family: "Unbounded-Regular";
 }

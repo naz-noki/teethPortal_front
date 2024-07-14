@@ -4,6 +4,7 @@ import * as types from "./MainHeader.types";
 import languageStorage from "../../storage/languageStorage/languageStorage";
 
 const MainHeader: FC<types.I_MainHeaderProps> = ({
+    isAuthor,
     toggleMenu,
     title,
     buttonText,
@@ -24,7 +25,12 @@ const MainHeader: FC<types.I_MainHeaderProps> = ({
                 <h2 className={style.header__title_h2}>
                     ZONE
                 </h2>
-                <h1 className={style.header__title_h1}>
+                <h1 
+                    className={`${isAuthor 
+                        ? style.header__title_h1_author
+                        : style.header__title_h1
+                    }`}
+                >
                     {title}
                 </h1>
             </div>

@@ -14,17 +14,3 @@
     font-size: 15px;
     font-family: "Unbounded-Regular";
 }
-
-.block__number {
-    width: max-content;
-    height: max-content;
-    position: absolute;
-    bottom: 45px;
-    left: 20px;
-    cursor: url("./images/pCur.png"), auto;
-    color: rgba(255, 255, 255, 0.445);
-    font-weight: regular;
-    font-size: 15px;
-    font-family: "Unbounded-Regular";
-    background-color: transparent;
-}

@@ -3,6 +3,7 @@ import App from "./App";
 import MainPage from "./page/MainPage/MainPage";
 import ErrorPage from "./page/ErrorPage/ErrorPage";
 import LibraryPage from "./page/LibraryPage/LibraryPage";
+import AuthorPage from "./page/AuthorPage/AuthorPage";
 
 const router = createBrowserRouter([
     {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
             {
                 path: "library",
                 element: <LibraryPage />,
+            },
+            {
+                path: "author/:id",
+                element: <AuthorPage />,
             },
         ],
     },

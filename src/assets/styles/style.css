@@ -22,6 +22,11 @@
     src: url('../fonts/RockSalt/RockSalt-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
 
+@font-face {
+    font-family: 'New-Cyrillic-Goth';
+    src: url('../fonts/NewCyrillicGoth/NewCyrillicGoth-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
 html {
     max-width: 100dvw;
     min-height: 100dvh;

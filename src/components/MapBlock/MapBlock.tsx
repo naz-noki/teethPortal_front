@@ -4,18 +4,12 @@ import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import ImagesStorage from "../../storage/imagesStorage/imagesStorage";
 import languageStorage from "../../storage/languageStorage/languageStorage";
+import moveMonitor from "../../helpers/moveMonitor";
+import CounterBlock from "../CounterBlock/CounterBlock";
 
 const MapBlock = () => {
     const monitor = useRef<null | HTMLElement>(null);
     const [mapElementWidth, setMapElementWidth] = useState<number>(65);
-
-    const moveMonitor = (monitor: HTMLElement | null, event: MouseEvent) => {
-        if(monitor === null) return;
-
-        let x = event.clientX / window.innerWidth;
-        let y = event.clientY / window.innerHeight;  
-        monitor.style.transform = 'translate(-' + x * 50 + 'px, -' + y * 50 + 'px)';
-    }; 
 
     const scrollMapElement = (value: number) => {
         if(value > 0) {
@@ -42,26 +36,32 @@ const MapBlock = () => {
     }, []);
 
     return (
-        <section className={style.mainBlock} ref={monitor}>
-            <div className={style.mapElement}>
-                <Link 
-                    to={"./contact"}
-                    className={style.mapElement_link}
-                >  
-                    <img 
-                        className={style.mapElement_icon}
-                        src={ImagesStorage.mapElementImage} 
-                        alt="Map element image" 
-                        style={{
-                            width: mapElementWidth
-                        }}
-                    />
-                    <h1 className={style.mapElement_title}>
-                        {languageStorage.GetPhrase("mapElementTitle")}
-                    </h1>
-                </Link>  
-            </div>
-        </section>
+        <>
+            <section className={style.mainBlock} ref={monitor}>
+                <div className={style.mapElement}>
+                    <Link 
+                        to={"./contact"}
+                        className={style.mapElement_link}
+                    >  
+                        <img 
+                            className={style.mapElement_icon}
+                            src={ImagesStorage.mapElementImage} 
+                            alt="Map element image" 
+                            style={{
+                                width: mapElementWidth
+                            }}
+                        />
+                        <h1 className={style.mapElement_title}>
+                            {languageStorage.GetPhrase("mapElementTitle")}
+                        </h1>
+                    </Link>  
+                </div>
+            </section>
+            <CounterBlock 
+                text={languageStorage.GetPhrase("textForHouseNumber")}
+                counter={1}
+            />
+        </>
     );
 };
 
