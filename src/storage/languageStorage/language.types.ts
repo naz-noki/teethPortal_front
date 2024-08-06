@@ -11,6 +11,8 @@ export interface I_Language {
     menuThirdTitle: string;
     libraryHeaderText: string;
     searchBarPlaceholder: string;
+    goTGtext: string;
+    goTGlink: string;
 };
 
 export interface I_Languages {

@@ -12,6 +12,8 @@ const language: types.I_Languages = {
         menuThirdTitle: "КОНТАКТЫ",
         libraryHeaderText: "карта",
         searchBarPlaceholder: "Поиск...",
+        goTGtext: "Ваш экран слишком мал, перезайдите с компьютера или воспользуйтесь нашим ботом🦷 в Telegram",
+        goTGlink: "https://t.me/PortalToTheWorldOfTEETH_bot",
     },
     "en": {
         mapElementTitle: "00 lighthouse",
@@ -24,6 +26,8 @@ const language: types.I_Languages = {
         menuThirdTitle: "CONTACTS",    
         libraryHeaderText: "map",
         searchBarPlaceholder: "Search...",
+        goTGtext: "Your screen is too small, re-visit from your computer or use our bot🦷 in Telegram",
+        goTGlink: "https://t.me/PortalToTheWorldOfTEETH_bot",
     },
 };
 

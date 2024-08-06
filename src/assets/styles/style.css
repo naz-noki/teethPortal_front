@@ -10,6 +10,11 @@
 @font-face {
     font-family: 'Unbounded-Bold';
     src: url('../fonts/Unbounded/Unbounded-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+} 
+
+@font-face {
+    font-family: 'Unbounded-Light';
+    src: url('../fonts/Unbounded/Unbounded-Light.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
 
 @font-face {

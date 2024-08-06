@@ -1,0 +1,8 @@
+@import url("../../assets/styles/style.css");
+
+.mainBlock {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+

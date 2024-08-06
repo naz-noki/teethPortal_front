@@ -3,6 +3,7 @@ export interface I_ImagesStorage {
     welcomeElementImage: string;
     libraryHeaderElementImage: string;
     searchBarElementImage: string;
+    telegramQRcodeImage: string;
 };
 
 const ImagesStorage: I_ImagesStorage = {
@@ -10,6 +11,7 @@ const ImagesStorage: I_ImagesStorage = {
     welcomeElementImage: "./images/welocome__image.png",
     libraryHeaderElementImage: "./images/majak.png",
     searchBarElementImage: "./images/searchIcon.png",
+    telegramQRcodeImage: "./images/tgQRcode.jpg",
 };
 
 export default ImagesStorage;
