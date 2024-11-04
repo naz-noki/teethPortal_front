@@ -1,12 +1,4 @@
-const data = {
-    id: 0,
-    avatar: "./images/avatar.png",
-    name: "Awqel a`j",
-    description: "aSDkjalskdja aLKSJD ALKSJD ALKSDJ aKLSJD aksldj",
-};
-
 import { useState } from "react";
-import { useParams } from "react-router-dom";
 import LanguageStorage from "../../storage/languageStorage/languageStorage";
 import style from "./AuthorPage.module.css";
 import MainHeader from "../../components/MainHeader/MainHeader";

@@ -7,8 +7,18 @@ const App = () => {
   const [continueFlag, setContinueFlag] = useState(false); 
   const [isDesktop, setIsDesktop] = useState(false);
 
-  useLayoutEffect(() => {
+  const checkScreenSize = () => {
     if(window.screen.availWidth >= 1000) setIsDesktop(true);
+    else setIsDesktop(false);
+  };
+
+  useLayoutEffect(() => {
+    checkScreenSize();
+    window.addEventListener("resize", () => checkScreenSize());
+  
+    return () => {
+      window.removeEventListener("resize", () => checkScreenSize());
+    };
   }, []);
   
 

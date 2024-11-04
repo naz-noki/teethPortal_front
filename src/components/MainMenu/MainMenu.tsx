@@ -7,7 +7,7 @@ import { useRef, useEffect, FC, useState } from "react";
 const MainMenu: FC<types.I_MainMenuProps> = ({
     toggleMenu,
 }) => {
-    const [menuItems, setMenuItems] = useState([
+    const [menuItems] = useState([
         {
             title: languageStorage.GetPhrase("menuFirstTitle"),
             path: "/library",
